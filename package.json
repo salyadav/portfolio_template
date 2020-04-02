@@ -10,7 +10,7 @@
     "start": "webpack-dev-server --open"
   },
   "keywords": [],
-  "author": "",
+  "author": "saloni_yadav",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.9.0",

@@ -1,0 +1,81 @@
+.contact {
+    font-size: 18px;
+    font-family: 'Gentium Book Basic', serif;
+    color: #7b8484;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 25%;
+    padding-right: 25%;
+
+    &-title {
+        text-align: center;
+        color: #000;
+        font-size: 40px;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+
+    &-details {
+        // font-size: 18px;
+        word-wrap: break-word;
+    }
+
+    &-form {
+        padding-top: 30px;
+        
+        &-title {
+            font-family: 'Sen', sans-serif;
+            font-weight: bold;
+            color: #000;
+        }
+    }
+
+    input[type=text] {
+        @extend %form-field;
+    }
+
+    input[type=email] {
+        @extend %form-field;
+    }
+
+    input[type=submit] {
+        font-family: 'Gentium Book Basic', serif;
+        font-size: 16px;
+        background-color: #000;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #fff;
+            color: #000;
+            border: solid;
+            border-color: #000;
+            box-sizing: border-box;
+        }
+    }
+
+    textarea {
+        @extend %form-field;
+        resize: vertical;
+        min-height: 150px;
+    }
+
+    ::placeholder {
+        font-family: 'Gentium Book Basic', serif;
+        color: #c9c9c9;
+    }
+}
+
+%form-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}

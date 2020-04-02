@@ -2,7 +2,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin }= require('clean-webpack-plugin');   
 const path = require('path');
 // const isDevelopment = process.env.NODE_ENV === 'development';
-// 
 module.exports = {
     entry: {
         index: './src/app.js'
@@ -13,9 +12,6 @@ module.exports = {
     },
     module: {
         rules:[{
-            test: /\.html$/i,
-            loader: 'html-loader',
-        }, {
             test: /\.js$/,
             exclude: /node_modules/,
             use: {
@@ -39,18 +35,21 @@ module.exports = {
                 // Translates CSS into CommonJS
                 'css-loader',
                 // Compiles Sass to CSS
-                'sass-loader',
+                'sass-loader'
             ]
         }, {
-            test: /\.(png|jpg|gif|svg)$/,
+            test: /\.(png|jpg|gif|svg|jpeg)$/,
             use: [
             {
                 loader: 'file-loader'
             }]
+        }, {
+            test: /\.html$/i,
+            loader: 'html-loader',
         }]
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.scss', '.html']
+        extensions: ['.js', '.jsx', '.scss']
     },
     devtool: 'inline-source-map',
     plugins: [

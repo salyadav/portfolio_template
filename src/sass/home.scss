@@ -1,38 +1,38 @@
-body {
-    font-family: 'Sen', sans-serif;
-}
-
-.navigation {
-    background-color: #000;
+.home-header {
     color: #fff;
-    display: flex;
-    padding: 10px;
+    text-align: center;
 
-    &-title {
-        @extend .navigation;
-        font-size: 26px;
-        flex: 1;
+    &-elevator {
+        font-family: 'Gentium Book Basic', serif;
+        font-style: italic;
+        font-size: 18px;
     }
 
-    &-options {
-        @extend .navigation;
-        flex: 1;
-        display: flex;
-        align-items: center;        
+    &-name {
+        @extend .home-header;
+        font-family: 'Sen', sans-serif;
+        font-size: 80px;
+        font-weight: bolder;
+        margin: 10px;
+    }
 
-        span {
-            flex: 1;
-            text-align: right;
-        }
-        
-        span:hover {
+    button {
+        font-family: 'Sen', sans-serif;
+        font-size: 15px;
+        color: #fff;
+        background-color: #36B3A8;
+        border: none;
+        padding: 16px 28px;
+        font-weight: bold;
+        border-radius: 32px;
+
+        &:hover {
             cursor: pointer;
+            background-color: #309e95;
         }
 
-        a {
-            text-decoration: none;
-            color: #fff;
+        &:focus {
+            outline: none;
         }
     }
 }
-

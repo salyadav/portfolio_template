@@ -1,35 +1,29 @@
-import './sass/home';
-import './home.html';
+import './sass/app';
+import { renderHomePage } from './js/view/home';
+import { renderContactPage } from './js/view/contact';
+
 //components
 const HomePage = {
     render: () => {
-        return `
-            <div>Home Page</div>
-        `;
+        renderHomePage();
     }
 }
 
 const ExplorePage = {
     render: () => {
-        return `
-            <div>Explore Page</div>
-        `;
+        //TODO: Insert html
     }
 }
 
 const ResumePage = {
     render: () => {
-        return `
-            <div>Resume Page</div>
-        `;
+        //TODO: Insert html
     }
 }
 
 const ContactPage = {
     render: () => {
-        return `
-            <div>Contact Page</div>
-        `;
+        renderContactPage();
     }
 }
 
@@ -54,11 +48,7 @@ const router = () => {
     //get component mapping
     const { component = ErrorPage } =  getPage(path, routes) || {};
     //embed component in html
-    // document.getElementById('page').innerHTML = component.render();
-    $(document).ready(function(){
-        $('#page').load("home.html");
-    });
-
+    component.render();
 }
 
 const getPage = (path, routes) => {
