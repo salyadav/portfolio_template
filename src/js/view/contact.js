@@ -29,14 +29,14 @@ function _constructContactPage() {
                 </p>
                 <p>Linkedin:</p>
                 <p>
-                    <span><a href='https://www.linkedin.com/in/saloni-yadav/' target='_blank'>Saloni Yadav</a><span>
+                    <span><a href='https://www.linkedin.com/in/saloni-yadav/' target='_blank' title='View profile'>Saloni Yadav</a><span>
                 </p>
             </div>
 
             <div class='contact-form'>
-                <p class='contact-form-title'>
+                <h4 class='contact-form-title'>
                     OR JUST COMPLETE THE FORM BELOW AND I’LL REACH OUT TO YOU RIGHT AWAY!
-                </p>
+                </h4>
                 ${_getContactForm()}
             </div>
         </div>

@@ -14,6 +14,9 @@ function _toggleBold() {
 
 function _constructResumePage() {
     return `
-        <div>resume</div>
+        <div id='resume-aboutme'>
+            <div id='resume-aboutme'></div>
+            <div></div>
+        </div>
     `;
 }
