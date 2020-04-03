@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tech Murgi</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&family=Sen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Sen&display=swap" rel="stylesheet">
+    <noscript>
+        <style>
+            body {
+                opacity: 1;
+            }
+        </style>
+    </noscript>
 </head>
 
 <body>
@@ -14,15 +21,23 @@
         <div id='navigation-header' class="navigation">
             <span class="navigation-title">TECH MURGI</span>
             <span class="navigation-options">
-                <span><a href='/'>Home</a></span>
-                <span><a href='#/explore'>Explore</a></span>
-                <span><a href='#/resume'>Resume</a></span>
-                <span><a href='#/contact'>Contact</a></span>
+                <span id='nav-home' class='do-bold'><a href='/'>Home</a></span>
+                <span id='nav-explore'><a href='#/explore'>Explore</a></span>
+                <span id='nav-resume'><a href='#/resume'>Resume</a></span>
+                <span id='nav-contact'><a href='#/contact'>Contact</a></span>
             </span>
         </div>
     </nav>
     <!-- page content -->
     <section id="page"></section>
-    <!-- TODO: Add Footer -->
+    <!-- footer -->
+    <footer>
+        <div>
+            <p>Quarantine and Chill</p>
+            <br>
+            <p>Created by</p>
+            <p><b>TECH MURGI</b></p>
+        </div>
+    </footer>
 </body>
 </html>

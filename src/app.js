@@ -1,6 +1,7 @@
 import './sass/app';
 import { renderHomePage } from './js/view/home';
 import { renderContactPage } from './js/view/contact';
+import { renderResumePage } from './js/view/resume';
 
 //components
 const HomePage = {
@@ -17,7 +18,7 @@ const ExplorePage = {
 
 const ResumePage = {
     render: () => {
-        //TODO: Insert html
+        renderResumePage();
     }
 }
 
@@ -29,9 +30,7 @@ const ContactPage = {
 
 const ErrorPage = {
     render: () => {
-        return `
-            <div>Error page</div>
-        `;
+        //TODO: Insert
     }
 }
 
@@ -57,5 +56,10 @@ const getPage = (path, routes) => {
     ) || undefined;
 }
 
+const showPage = () => {
+    document.getElementsByTagName('body')[0].classList.add('all-loaded');
+}
+
 window.addEventListener('load', router);
+window.addEventListener('load', showPage);
 window.addEventListener('hashchange', router);

@@ -1,11 +1,19 @@
+@import 'common';
 body {
+    opacity: 0;
     overflow-x: hidden;
     margin: unset;
+
+    &.all-loaded {
+        @extend body;
+        opacity: 1;
+    }
 }
 
 .navigation-background {
     background-image: url('../assets/bgi_3.jpg');
     background-repeat: no-repeat;
+    background-attachment: fixed; //for parallax scrolling effect
     background-size: cover;
     height: 350px;
 }
@@ -43,6 +51,31 @@ body {
                 cursor: pointer;
             }
         }
+
+        .do-bold {
+            font-weight: bold;
+        }
+    }
+
+    ::selection {
+        @extend %selector-light;
+    }
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #000;
+    height: 150px;
+    color: #fff;
+
+    & p{
+        text-align: center;
+        font-family: 'Sen', sans-serif;
+    }
+
+    ::selection {
+        @extend %selector-light;
     }
 }
 

@@ -1,0 +1,25 @@
+%content-heading {
+    font-family: 'EB Garamond', serif;
+    text-align: center;
+    color: #000;
+    font-size: 40px;
+    font-weight: 400;
+    // margin-bottom: 40px;
+}
+
+%content-description {
+    font-size: 18px;
+    font-family: 'EB Garamond', serif;
+    color: #7b8484;
+    line-height: 26px;
+}
+
+%selector-light {
+    color: #000;
+    background: #e4e4e4;
+}
+
+%selector-dark {
+    color: #fff;
+    background: #000;
+}

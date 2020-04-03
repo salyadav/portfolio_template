@@ -1,11 +1,12 @@
+@import 'common';
 .home-header {
     color: #fff;
     text-align: center;
 
     &-elevator {
-        font-family: 'Gentium Book Basic', serif;
+        font-family: 'EB Garamond', serif;
         font-style: italic;
-        font-size: 18px;
+        font-size: 20px;
     }
 
     &-name {
@@ -34,5 +35,34 @@
         &:focus {
             outline: none;
         }
+    }
+
+    ::selection {
+        @extend %selector-light;
+    }
+}
+
+.home-page {
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &-whoami {
+        @extend %content-heading;
+    }
+
+    &-whoamians {
+        @extend %content-description;
+        margin: 0 150px;
+        text-align: center;
+
+        a {
+            color: #309e95;
+        }
+    }
+
+    ::selection {
+        @extend %selector-dark;
     }
 }

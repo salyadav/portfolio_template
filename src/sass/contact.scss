@@ -1,22 +1,20 @@
+@import 'common';
 .contact {
-    font-size: 18px;
-    font-family: 'Gentium Book Basic', serif;
-    color: #7b8484;
+    @extend %content-description;
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 25%;
     padding-right: 25%;
 
+    ::selection {
+        @extend %selector-dark;
+    }
+
     &-title {
-        text-align: center;
-        color: #000;
-        font-size: 40px;
-        font-weight: 400;
-        margin-bottom: 40px;
+        @extend %content-heading;
     }
 
     &-details {
-        // font-size: 18px;
         word-wrap: break-word;
     }
 
@@ -39,7 +37,7 @@
     }
 
     input[type=submit] {
-        font-family: 'Gentium Book Basic', serif;
+        font-family: 'EB Garamond', serif;
         font-size: 16px;
         background-color: #000;
         color: #fff;
@@ -65,7 +63,7 @@
     }
 
     ::placeholder {
-        font-family: 'Gentium Book Basic', serif;
+        font-family: 'EB Garamond', serif;
         color: #c9c9c9;
     }
 }
