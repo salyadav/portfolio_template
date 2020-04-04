@@ -4,7 +4,6 @@
     color: #000;
     font-size: 40px;
     font-weight: 400;
-    // margin-bottom: 40px;
 }
 
 %content-description {
@@ -12,6 +11,7 @@
     font-family: 'EB Garamond', serif;
     color: #7b8484;
     line-height: 26px;
+    word-wrap: break-word;
 }
 
 %selector-light {

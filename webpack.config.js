@@ -38,14 +38,17 @@ module.exports = {
                 'sass-loader'
             ]
         }, {
-            test: /\.(png|jpg|gif|svg|jpeg)$/,
+            test: /\.(png|jp(e*)g|gif|svg)$/,
             use: [
-            {
-                loader: 'file-loader'
-            }]
+                'file-loader'
+            ]
         }, {
             test: /\.html$/i,
             loader: 'html-loader',
+            options: {
+                // THIS will resolve relative URLs to reference from the src/ directory
+                root: path.resolve(__dirname, 'src')
+            }
         }]
     },
     resolve: {

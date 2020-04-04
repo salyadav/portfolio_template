@@ -19,9 +19,11 @@ function _toggleBold() {
 
 function _constructHomeHeader() {
     return `
-            <p class='home-header-elevator'>Travel Monger Techie, Illustrator, and lunatic for Great Designs</p>
+            <p class='home-header-elevator'>
+                Travel Monger Techie, Illustrator, and lunatic for Great Designs
+            </p>
             <p class='home-header-name'>SALONI YADAV</p><br>
-            <button type='button'>LEARN MORE</button>
+            <button type='button' onclick="window.location.href = '#/resume';">KNOW MORE</button>
     `;
 }
 
