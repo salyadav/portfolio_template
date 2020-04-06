@@ -31,3 +31,34 @@
         }
     }
 }
+
+.resume-profiles {
+    display: flex;
+    margin-right: 40%;
+    margin-left: 40%;
+
+    &-email {
+        @extend %icon-email;
+    }
+    &-linkedin {
+        @extend %icon-linkedin;
+    }
+    &-github {
+        @extend %icon-github;
+    }
+    &-insta {
+        @extend %icon-insta;
+    }
+    &-stackoverflow {
+        @extend %icon-stackoverflow;
+    }
+    
+    & li {
+        flex:1;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.4;
+        }
+    }
+}

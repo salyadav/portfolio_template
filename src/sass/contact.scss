@@ -15,7 +15,8 @@
     }
 
     &-details {
-        word-wrap: break-word;
+        margin:20px;
+        list-style-type: none;
     }
 
     &-form {
@@ -76,4 +77,16 @@
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
+}
+
+.icon-email {
+    @extend %icon-email;
+    float: left;
+    padding-right: 20px;
+}
+
+.icon-linkedin {
+    @extend %icon-linkedin;
+    float: left;
+    padding-right: 20px;
 }

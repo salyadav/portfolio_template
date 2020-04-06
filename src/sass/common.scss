@@ -23,3 +23,36 @@
     color: #fff;
     background: #000;
 }
+
+%icon-dimension {
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 40px;
+    min-width: 40px;
+    display: block;
+}
+
+%icon-email {
+    @extend %icon-dimension;
+    background-image: url('../assets/envelope-square-solid.svg');
+}
+
+%icon-linkedin {
+    @extend %icon-dimension;
+    background-image: url('../assets/linkedin-brands.svg');
+}
+
+%icon-github {
+    @extend %icon-dimension;
+    background-image: url('../assets/github-square-brands.svg');
+}
+
+%icon-insta {
+    @extend %icon-dimension;
+    background-image: url('../assets/instagram-square-brands.svg');
+}
+
+%icon-stackoverflow {
+    @extend %icon-dimension;
+    background-image: url('../assets/stack-overflow-brands.svg');
+}

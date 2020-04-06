@@ -19,18 +19,20 @@ function _constructContactPage() {
         <div class='contact'>
             <h1 class='contact-title'>Contact Me!</h1>
             
-            <div class='contact-details'>
+            <div>
                 <p>
                     Questions, suggestions, feedback, criticism, concerns? Feel free to reach out to me!
                 </p>
-                <p>Email:</p>
-                <p>
-                    <span>yadavsaloni2018@gmail.com</span>
-                </p>
-                <p>Linkedin:</p>
-                <p>
-                    <span><a href='https://www.linkedin.com/in/saloni-yadav/' target='_blank' title='View profile'>Saloni Yadav</a><span>
-                </p>
+                <ul>
+                    <li class='contact-details'>
+                        <span class='icon-linkedin'></span>
+                        <span><a href='https://www.linkedin.com/in/saloni-yadav/' target='_blank' title='Open profile in new tab'>View Profile</a><span>
+                    </li>
+                    <li class='contact-details'>
+                        <span class='icon-email'></span>
+                        <span>yadavsaloni2018@gmail.com</span>
+                    </li>
+                <ul>
             </div>
 
             <div class='contact-form'>

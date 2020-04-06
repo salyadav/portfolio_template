@@ -8,7 +8,6 @@ export function renderResumePage() {
         document.getElementById('home-header').style.display = 'none';
     }
     document.getElementById('page').innerHTML = _constructResumePage();
-
     document.getElementById('resume-aboutme-pic').src = icon;
 }
 
@@ -33,6 +32,23 @@ function _constructResumePage() {
                 </p>
             </div>
         </div>
+        <ul class='resume-profiles'>
+            <a>
+                <li class='resume-profiles-email' title='Send an email'></li>
+            </a>
+            <a href='https://www.linkedin.com/in/saloni-yadav/' target='_blank'>
+                <li class='resume-profiles-linkedin' title='View linkedin profile'></li>
+            </a>
+            <a href='https://github.com/salyadav' target='_blank'>
+                <li class='resume-profiles-github' title='View github profile'></li>
+            </a>
+            <a href='https://stackoverflow.com/users/12325211/saloni-yadav' target='_blank'>
+                <li class='resume-profiles-stackoverflow' title='View stackoverflow profile'></li>
+            </a>
+            <a href='https://www.instagram.com/nayan_yadayada/' target='_blank'>
+                <li class='resume-profiles-insta' title='Checkout instagram illustrations'></li>
+            </a>
+        </ul>
         ${_getWorkEx()}
     `;
 }
