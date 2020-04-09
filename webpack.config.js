@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin }= require('clean-webpack-plugin');   
 const path = require('path');
 // const isDevelopment = process.env.NODE_ENV === 'development';
@@ -39,9 +40,13 @@ module.exports = {
             ]
         }, {
             test: /\.(png|jp(e*)g|gif|svg)$/,
-            use: [
-                'file-loader'
-            ]
+            use: [{
+                loader: 'url-loader',
+                options: {
+                    limit: 8192,
+                    name: 'assets/[hash]-[name].[ext]'
+                }
+            }]
         }, {
             test: /\.html$/i,
             loader: 'html-loader'
@@ -59,7 +64,10 @@ module.exports = {
             chunks: ['index'],
             filename: 'index.html'
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new CopyWebpackPlugin([
+            { from: 'src/assets', to: 'assets'}
+        ])
     ], 
     devServer: {
         contentBase: './dist',

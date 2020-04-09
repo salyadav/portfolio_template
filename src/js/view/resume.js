@@ -8,6 +8,10 @@ export function renderResumePage() {
         document.getElementById('home-header').style.display = 'none';
     }
     document.getElementById('page').innerHTML = _constructResumePage();
+
+    //I am importing the image in js explicitly and setting it in html 
+    //Because only when I import, webpack will be able to resolve the dependency and bundle this img in dist
+    //Use CopyWebpackPlugin to be able to directly set the src in the html
     document.getElementById('resume-aboutme-pic').src = icon;
 }
 
