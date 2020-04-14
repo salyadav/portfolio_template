@@ -1,9 +1,20 @@
 @import 'common';
 
+%resume-content-head {
+    font-family: 'Sen', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
 .resume-aboutme {
+    ::selection {
+        @extend %selector-dark;
+    }
+
     display: flex;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     padding-right: 15%;
     padding-left: 15%;
     text-align: center;
@@ -20,9 +31,8 @@
         margin-left: 40px;
 
         &-head {
-            font-family: 'Sen', sans-serif;
-            font-size: 18px;
-            font-weight: bold;
+            @extend %resume-content-head;
+            color: #000;
         }
 
         &-text {
@@ -36,6 +46,7 @@
     display: flex;
     margin-right: 40%;
     margin-left: 40%;
+    margin-bottom: 40px;
 
     &-email {
         @extend %icon-email;
@@ -59,6 +70,112 @@
 
         &:hover {
             opacity: 0.4;
+        }
+    }
+}
+
+.resume-techsheet {
+    ::selection {
+        @extend %selector-dark;
+    }
+
+    margin-bottom: 40px;
+
+    &-head {
+        @extend %content-heading;
+        margin-bottom: 20px;
+    }
+
+    &-item {
+        @extend %content-description;
+    
+        margin-left: 30%;
+        margin-right: 25%;
+        // font-weight: bold;
+
+        &-head {
+            padding-right: 100px;
+        }
+    }
+}
+
+.resume-workex {
+    ::selection {
+        @extend %selector-light;
+    }
+
+    margin-right: 15%;
+    margin-left: 15%;
+    text-align: center;
+
+    &-head {
+        @extend %content-heading;
+    }
+
+    &-item {
+        display: inline-flex;
+        margin-bottom: 40px;
+        margin-top: 40px;
+
+        &-img {
+            width: 50vw;
+            height: 35vw;
+        }
+
+        &-about {
+            background-color: #000;
+            width: 35vw;
+            height: 25vw;
+            margin-left: -8vw;
+            margin-top: 5vw;
+
+            &-head {
+                @extend %resume-content-head;
+                color: #fff;
+                padding: 10px;
+            }
+
+            &-content {
+                @extend %content-description;
+                text-align: left;
+                padding-left: 30px;
+                padding-right: 10px;
+                white-space: normal;
+            }
+        }
+    }
+}
+
+.resume-csr {
+    margin-bottom: 40px;
+
+    &-head {
+        @extend %content-heading;
+    }
+
+    &-item {
+        margin-left: 20%;
+        text-align: center;
+        display: none;
+        margin-top: 40px;
+
+        img {
+            width: 50vw;
+            height: 35vw;
+            border: 0.5px solid #551515;
+        }
+    
+        &-pg {
+            @extend %resume-content-head;
+            background-color: #000;
+            color: #fff;
+            z-index: 1;
+            width: 400px;
+            height: 50px;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+            margin-right: -250px;
         }
     }
 }
