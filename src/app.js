@@ -42,12 +42,14 @@ const routes = [
 ];
 
 const router = () => {
+    document.getElementsByTagName('body')[0].classList.add('all-loaded');
     //get current path
     const path = window.location.hash.slice(1).toLocaleLowerCase() || '/';
     //get component mapping
     const { component = ErrorPage } =  getPage(path, routes) || {};
     //embed component in html
     component.render();
+    document.querySelector('body').classList.add('page-loaded');
 }
 
 const getPage = (path, routes) => {
@@ -56,10 +58,18 @@ const getPage = (path, routes) => {
     ) || undefined;
 }
 
-const showPage = () => {
-    document.getElementsByTagName('body')[0].classList.add('all-loaded');
+const windowScroll = () => {
+    //To fade-in navigation bar black opacity
+    let offsetConst = 200;
+    if (window.location.hash === '') {
+        offsetConst = 40; //height of my navigation bar
+    }
+    if (window.pageYOffset > 0) {
+        const opacity = window.pageYOffset/offsetConst;
+        document.getElementById('navigation-header').style.backgroundColor='rgba(0, 0, 0, '+ opacity +')';
+    }
 }
 
 window.addEventListener('load', router);
-window.addEventListener('load', showPage);
 window.addEventListener('hashchange', router);
+window.addEventListener('scroll', windowScroll);

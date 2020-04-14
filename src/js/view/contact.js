@@ -2,6 +2,7 @@ import '../../sass/contact';
 
 export function renderContactPage() {
     _toggleBold();
+    document.getElementsByClassName('navigation-background')[0].style.height = '200px';
 
     if(document.getElementById('home-header')) {
         document.getElementById('home-header').style.display = 'none';

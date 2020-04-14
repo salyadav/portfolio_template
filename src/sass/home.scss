@@ -2,6 +2,7 @@
 .home-header {
     color: #fff;
     text-align: center;
+    padding-top: 55px;
 
     &-elevator {
         font-family: 'EB Garamond', serif;
@@ -10,7 +11,7 @@
     }
 
     &-name {
-        @extend .home-header;
+        // @extend .home-header;
         font-family: 'Sen', sans-serif;
         font-size: 80px;
         font-weight: bolder;

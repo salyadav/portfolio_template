@@ -5,6 +5,8 @@ import '../../assets/Oracle.jpg';
 export function renderResumePage() {
     _toggleBold();
 
+    document.getElementsByClassName('navigation-background')[0].style.height = '200px';
+
     if(document.getElementById('home-header')) {
         document.getElementById('home-header').style.display = 'none';
     }
@@ -73,7 +75,7 @@ function _getTechStack() {
                     </tr>
                     <tr>
                         <td>Frameworks</td>
-                        <td>SpringMVC, ExtJS, Knockout.js, JET, SASS</td>
+                        <td>SpringMVC, jQuery, ExtJS, Knockout.js, JET, SASS</td>
                         
                     </tr>
                     <tr>

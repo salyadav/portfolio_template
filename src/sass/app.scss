@@ -2,7 +2,7 @@
 body {
     opacity: 0;
     overflow-x: hidden;
-    margin: unset;
+    margin: 0;
 
     &.all-loaded {
         @extend body;
@@ -11,17 +11,23 @@ body {
 }
 
 .navigation-background {
-    background-image: url('../assets/bgi_3.jpg');
+    background: url('../assets/bgi_3.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed; //for parallax scrolling effect
     background-size: cover;
-    height: 350px;
+    height: 400px;
+    transition: height 1s;
 }
 
 .navigation {
     font-family: 'Sen', sans-serif;
     color: #fff;
     display: flex;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    margin: 0;
 
     &-title {
         font-size: 26px;
