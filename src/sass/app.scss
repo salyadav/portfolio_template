@@ -28,6 +28,7 @@ body {
     position: fixed;
     top: 0;
     margin: 0;
+    opacity: 0;
 
     &-title {
         font-size: 26px;
@@ -85,3 +86,6 @@ footer {
     }
 }
 
+.page-loaded .navigation {
+    animation: fadeIn 0.7s ease-in 0s forwards;
+}

@@ -24,6 +24,10 @@
         img {
             max-width: 100%;
         }
+        &:hover img{
+            opacity: 0.3;
+            cursor: pointer;
+        }
     }
 
     &-summary {
@@ -148,6 +152,9 @@
 
 .resume-csr {
     margin-bottom: 40px;
+    ::selection {
+        @extend %selector-dark;
+    }
 
     &-head {
         @extend %content-heading;

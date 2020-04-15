@@ -8,14 +8,15 @@
         font-family: 'EB Garamond', serif;
         font-style: italic;
         font-size: 20px;
+        transform: translateY(-20px);
     }
 
     &-name {
-        // @extend .home-header;
         font-family: 'Sen', sans-serif;
         font-size: 80px;
         font-weight: bolder;
         margin: 10px;
+        transform: translateY(-30px);
     }
 
     button {
@@ -51,12 +52,14 @@
 
     &-whoami {
         @extend %content-heading;
+        transform: translateY(-20px);
     }
 
     &-whoamians {
         @extend %content-description;
         margin: 0 150px;
         text-align: center;
+        transform: translateY(-30px);
 
         a {
             color: #309e95;
@@ -66,4 +69,8 @@
     ::selection {
         @extend %selector-dark;
     }
+}
+
+.page-loaded .home-header-elevator, .home-header-name, .home-page-whoami, .home-page-whoamians {
+    animation: slideIn 0.7s ease-in 0s forwards;
 }

@@ -28,7 +28,9 @@ function _constructResumePage() {
     return `
         <div class='resume-aboutme'>
             <div class='resume-aboutme-pic'>
-                <img id='resume-aboutme-pic' alt='Saloni profile picture'/>
+            <a id='resume-aboutme-pic-overlay' href='https://www.linkedin.com/in/saloni-yadav/' target='_blank'>    
+                <img id='resume-aboutme-pic' alt='Saloni profile picture' title='view linkedin profile'/>
+            </a>
             </div>
             <div class='resume-aboutme-summary'>
                 <p class='resume-aboutme-summary-head'>ABOUT ME</p>

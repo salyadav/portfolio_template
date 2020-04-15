@@ -71,3 +71,5 @@ function _getContactForm() {
         </div>
     `;
 }
+
+document.getElementById('page').addEventListener('show', ()=>{console.log('page show');});
