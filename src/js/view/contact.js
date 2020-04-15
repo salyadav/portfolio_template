@@ -31,7 +31,7 @@ function _constructContactPage() {
                     </li>
                     <li class='contact-details'>
                         <span class='icon-email'></span>
-                        <span>yadavsaloni2018@gmail.com</span>
+                        <span><a href='mailto:yadavsaloni2018@gmail.com' target='_top' title='Send an email'>yadavsaloni2018@gmail.com</a></span>
                     </li>
                 <ul>
             </div>

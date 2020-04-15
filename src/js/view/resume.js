@@ -43,7 +43,7 @@ function _constructResumePage() {
             </div>
         </div>
         <ul class='resume-profiles'>
-            <a>
+            <a href='mailto:yadavsaloni2018@gmail.com' target='_top'>
                 <li class='resume-profiles-email' title='Send an email'></li>
             </a>
             <a href='https://www.linkedin.com/in/saloni-yadav/' target='_blank'>
