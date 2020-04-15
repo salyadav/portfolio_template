@@ -49,7 +49,11 @@ function _constructContactPage() {
 function _getContactForm() {
     return `
         <div>
-            <form id='contact-form' target='_self'>
+            <form id='contact-form' target='_self' 
+            action='mailto:yadavsaloni2018@gmail.com'
+            method='POST'
+            enctype='multipart/form-data'
+            name='contactFormEmail'>
                 <label for='name'>Name *</label><br>
                 <input id='name' type='text' placeholder='What do I call you?' required></input>
                 <br>

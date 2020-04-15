@@ -34,9 +34,11 @@
 
     input[type=text] {
         @extend %form-field;
+        font-family: 'Sen', sans-serif;
     }
 
     input[type=email] {
+        font-family: 'Sen', sans-serif;
         @extend %form-field;
     }
 
@@ -62,6 +64,7 @@
 
     textarea {
         @extend %form-field;
+        font-family: 'Sen', sans-serif;
         resize: vertical;
         min-height: 150px;
     }
