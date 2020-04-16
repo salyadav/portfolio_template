@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin }= require('clean-webpack-plugin');  
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin'); 
 const path = require('path');
 // const isDevelopment = process.env.NODE_ENV === 'development';
@@ -9,6 +10,7 @@ module.exports = {
         index: './src/app.js'
     },
     output: {
+        chunkFilename: '[name].bundle.js',
         filename: '[name].[contenthash].js', //contenthash for caching- unique hash based on js file content
         path: path.resolve(__dirname, 'dist')
     },
@@ -89,6 +91,9 @@ module.exports = {
         new CopyWebpackPlugin([
             { from: 'src/assets', to: 'assets'}
         ],
+        new UglifyJsPlugin({
+            sourceMap: true
+        })
         // new MiniCssExtractPlugin({
         //     filename: '[name].css',
         //     chunkFilename: '[id].css',
